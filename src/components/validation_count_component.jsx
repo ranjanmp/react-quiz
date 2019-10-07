@@ -5,8 +5,10 @@ class ValidationCountComponent extends Component {
   render() {
     return (
       <div className="row" style={rowStyle}>
-        <div className="col-8">{this.props.name}</div>
-        <div className="col-4" style={colStyle}>
+        <div className="col-8" style={col8Style}>
+          {this.props.name}
+        </div>
+        <div className="col-4 text-center" style={col4Style}>
           {this.props.count}
         </div>
       </div>
@@ -15,16 +17,25 @@ class ValidationCountComponent extends Component {
 }
 
 const rowStyle = {
-  width: "20%",
   borderStyle: "solid",
   borderWidth: "1px",
-  borderColor: "lightblue"
+  borderColor: "#007bff",
+  marginLeft: "5px",
+  marginRight: "5px"
 };
 
-const colStyle = {
-  backgroundColor: "lightblue",
+const col4Style = {
+  backgroundColor: "#007bff",
   color: "white",
-  fontWeight: "500"
+  fontWeight: "500",
+  paddingTop: "10px",
+  paddingBottom: "10px"
+};
+
+const col8Style = {
+  fontWeight: "500",
+  paddingTop: "10px",
+  paddingBottom: "10px"
 };
 
 export default ValidationCountComponent;
